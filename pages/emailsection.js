@@ -4,9 +4,12 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaSquareInstagram } from "react-icons/fa6";
+import { useRouter } from "next/router";
 
 const EmailSection = () => {
     const [emailSubmitted, setEmailSubmitted] = useState(false);
+    const router = useRouter(); // Initialize router 
+
 
     // users submitting the form and api req is sent
     const handleSubmit = async (e) => {
@@ -35,6 +38,8 @@ const EmailSection = () => {
         if (response.status === 200) {
             console.log("Message sent successfully!");
             setEmailSubmitted(true);
+            // Redirect to the home page
+            router.push('/');
         }
     };
 
@@ -131,7 +136,7 @@ const EmailSection = () => {
                         {
                             // show a success message if email is sent successfully
                             emailSubmitted && (
-                                <p className="text-center text-sm mt-2 text-blue-800">
+                                <p className="text-center text-lg mt-2 text-blue-800">
                                     Email sent successfully!
                                 </p>
                             )
