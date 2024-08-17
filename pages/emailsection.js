@@ -56,7 +56,7 @@ const EmailSection = () => {
             >
                 <div className="absolute inset-0 flex justify-center items-center"></div>
                 <div className="z-10">
-                    <h5 className="text-xl font-bold text-black my-2">Let's connect</h5>
+                            <h5 className="text-xl font-bold text-black my-2">Let us connect</h5>
                     <p className="mb-4 max-w-md text-black">
                         I’m always excited to connect with fellow developers, tech
                         enthusiasts, and potential collaborators. Whether you have a
@@ -123,7 +123,7 @@ const EmailSection = () => {
                             <textarea
                                 name="message"
                                 className="border-2 text-black border-gray-400 p-2 w-full"
-                                placeholder="Let's talk about ..."
+                                        placeholder="Let&apos;s talk about ..."
                                 rows="4"
                             />
                         </div>

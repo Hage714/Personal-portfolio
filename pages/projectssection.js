@@ -2,9 +2,8 @@
 import React, { useState, useRef } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-
-import ProjectCard from "./ProjectCard";
-import ProjectTag from "./ProjectTag";
+import ProjectCard from "./projectcard";
+import ProjectTag from "./projecttag";
 import { motion, useInView } from "framer-motion";
 
 const projectsData = [
@@ -94,18 +93,18 @@ const ProjectsSection = () => {
                         <h2 className="text-black text-center text-3xl font-bold mb-4 hover:underline hover:text-slate-500">
                     My Projects
                 </h2>
-                <div className="text-black flex flex-row justify-center items-center gap-2 py-6">
-                    <ProjectTag
+                <div className=" flex flex-row justify-center items-center gap-2 py-5 ">
+                            <ProjectTag
                         onClick={handleTagChange}
                         name="All"
-                        isSelected={tag === "All"}
+                        isSelected={tag === "All"} className="text-black"
                     />
-                    <ProjectTag
+                            <ProjectTag
                         onClick={handleTagChange}
                         name="MERN"
                                 isSelected={tag === "MERN"}
                     />
-                    <ProjectTag
+                            <ProjectTag
                         onClick={handleTagChange}
                         name="Express"
                                 isSelected={tag === "Express"}

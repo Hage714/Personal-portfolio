@@ -37,7 +37,7 @@ export default function Home() {
               />{" "}
             </h1>
             <p className="text-gray-800 text-base sm:text-lg lg:text-xl mb-6">
-              I am Hage Woche, a software developer with a specialization in JavaScript. I create innovative solutions that solve real-world problems and enhance user experiences. Explore my work to see how I bring ideas to life through code, and feel free to reach out if you're interested in collaborating or learning more about my projects. Let's build something amazing together!
+              I am Hage Woche, a software developer with a specialization in JavaScript. I create innovative solutions that solve real-world problems and enhance user experiences. Explore my work to see how I bring ideas to life through code, and feel free to reach out if you are interested in collaborating or learning more about my projects.Let us build something amazing together!
             </p>
             <div>
               <a href="#contact">
