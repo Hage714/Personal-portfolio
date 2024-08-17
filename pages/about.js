@@ -4,7 +4,7 @@ import { motion, useInView } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Image from "next/image";
-import TabButton from "./TabButton";
+import TabButton from "../pages/tabbutton";
 
 const skillsData = [
     { name: "JavaScript", percentage: 90 },
