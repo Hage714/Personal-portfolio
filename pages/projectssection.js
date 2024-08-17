@@ -17,7 +17,7 @@ const projectsData = [
         previewUrl: "https://hage.com",
     },
     {
-        id: 1,
+        id: 2,
         imgUrl: "/images/projects/tech4.jpg",
         title: "Recipe App",
         description: "A full-stack recipe app that allows users to explore, create, and share recipes. The app features a user-friendly interface for browsing recipes, adding new ones, and managing a personal collection.",
@@ -26,7 +26,7 @@ const projectsData = [
         previewUrl: "https://hage.com",
     },
     {
-        id: 1,
+        id: 3,
         imgUrl: "/images/projects/tech5.jpg",
         title: "Bookstore Project",
         description:
@@ -112,17 +112,17 @@ const ProjectsSection = () => {
                 </div>
 
                 <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
-                    {filteredProjects.map((project, index) => (
+                    {filteredProjects.map((project) => (
                         <motion.li
-                            key={index}
+                            key={project.id}
                             variants={cardVariants} initial="initial" animate={isInView ? "animate" : "initial"}
-                            transition={{ duration: 0.3, delay: index * 0.4 }}>
+                            transition={{ duration: 0.3, delay: project.id * 0.4 }}>
                             <ProjectCard
-                                key={project.id}
+                                //key={project.id}
                                 imgUrl={project.imgUrl}
                                 title={project.title}
                                 description={project.description}
-                                tags={project} // this is an array of strings that will be rendered as tags in the ProjectCard component
+                                //tags={project} // this is an array of strings that will be rendered as tags in the ProjectCard component
                                 gitUrl={project.gitUrl}
                                 previewUrl={project.previewUrl}
                             />
