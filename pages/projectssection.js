@@ -11,7 +11,7 @@ const projectsData = [
         id: 1,
         imgUrl: "/images/projects/tech3.jpg",
         title: "Shoe App",
-        description: "An intuitive shoe store app built with modern web technologies, offering users a seamless browsing experience, product filtering, and a secure checkout process.Integrated with user authentication and authorization.",
+        description: "An intuitive shoe store app built with modern web technologies, offering users a seamless browsing experience, product filtering, and a secure checkout process.Integrated with user entication and orization.",
         tag: ["All", "MERN"],
         gitUrl: "https://github.com/Hage714/Shoe-App-MERN.git",
         previewUrl: "https://hage.com",
@@ -30,7 +30,7 @@ const projectsData = [
         imgUrl: "/images/projects/tech5.jpg",
         title: "Bookstore Project",
         description:
-            "An online bookstore application built using the MERN stack, featuring user authentication, a shopping cart, and a seamless checkout process. Users can browse, search, and purchase books from a vast collection.",
+            "An online bookstore application built using the MERN stack, featuring user entication, a shopping cart, and a seamless checkout process. Users can browse, search, and purchase books from a vast collection.",
         tag: ["All", "MERN"],
         gitUrl: "https://github.com/Hage714/Bookstore-MERN-App.git",
         previewUrl: "https://hage.com",
@@ -39,7 +39,7 @@ const projectsData = [
         id: 4,
         imgUrl: "/images/projects/tech6.jpg",
         title: "GYM Management API",
-        description: "Developed a Gym Management API that streamlines member registration.The API supports secure authentication, integrates with payment gateways, and provides real-time analytics for gym administrators.",
+        description: "Developed a Gym Management API that streamlines member registration.The API supports secure entication, integrates with payment gateways, and provides real-time analytics for gym administrators.",
         tag: ["All", "Express"],
         gitUrl: "https://github.com/Hage714/GYM-Management-API.git",
         previewUrl: "https://hage.com",
@@ -86,53 +86,53 @@ const ProjectsSection = () => {
         <>
             <main className="flex min-h-screen flex-col bg-slate-300 w-full p-4">
 
-            <Navbar />
+                <Navbar />
                 <div className="container mt-24 mx-auto px-12 py-4">
 
-            <section>
+                    <section>
                         <h2 className="text-black text-center text-3xl font-bold mb-4 hover:underline hover:text-slate-500">
-                    My Projects
-                </h2>
-                <div className=" flex flex-row justify-center items-center gap-2 py-5 ">
+                            My Projects
+                        </h2>
+                        <div className=" flex flex-row justify-center items-center gap-2 py-5 ">
                             <ProjectTag
-                        onClick={handleTagChange}
-                        name="All"
-                        isSelected={tag === "All"} className="text-black"
-                    />
-                            <ProjectTag
-                        onClick={handleTagChange}
-                        name="MERN"
-                                isSelected={tag === "MERN"}
-                    />
-                            <ProjectTag
-                        onClick={handleTagChange}
-                        name="Express"
-                                isSelected={tag === "Express"}
-                    />
-                </div>
-
-                <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
-                    {filteredProjects.map((project) => (
-                        <motion.li
-                            key={project.id}
-                            variants={cardVariants} initial="initial" animate={isInView ? "animate" : "initial"}
-                            transition={{ duration: 0.3, delay: project.id * 0.4 }}>
-                            <ProjectCard
-                                //key={project.id}
-                                imgUrl={project.imgUrl}
-                                title={project.title}
-                                description={project.description}
-                                //tags={project} // this is an array of strings that will be rendered as tags in the ProjectCard component
-                                gitUrl={project.gitUrl}
-                                previewUrl={project.previewUrl}
+                                onClick={handleTagChange}
+                                name="All"
+                                isSelected={tag === "All"} className="text-black"
                             />
-                        </motion.li>
-                    ))}
-                </ul>
-            </section>
+                            <ProjectTag
+                                onClick={handleTagChange}
+                                name="MERN"
+                                isSelected={tag === "MERN"}
+                            />
+                            <ProjectTag
+                                onClick={handleTagChange}
+                                name="Express"
+                                isSelected={tag === "Express"}
+                            />
+                        </div>
+
+                        <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
+                            {filteredProjects.map((project) => (
+                                <motion.li
+                                    key={project.id}
+                                    variants={cardVariants} initial="initial" animate={isInView ? "animate" : "initial"}
+                                    transition={{ duration: 0.3, delay: project.id * 0.4 }}>
+                                    <ProjectCard
+                                        //key={project.id}
+                                        imgUrl={project.imgUrl}
+                                        title={project.title}
+                                        description={project.description}
+                                        //tags={project} // this is an array of strings that will be rendered as tags in the ProjectCard component
+                                        gitUrl={project.gitUrl}
+                                        previewUrl={project.previewUrl}
+                                    />
+                                </motion.li>
+                            ))}
+                        </ul>
+                    </section>
                 </div>
 
-            <Footer />
+                <Footer />
             </main>
         </>
     );

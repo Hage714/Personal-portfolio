@@ -1,8 +1,16 @@
-// pages/api/contact.js
 import nodemailer from 'nodemailer';
 
 export default async function handler(req, res) {
     const { name, email, message } = req.body;
+
+    // Debug logs
+    console.log("GMAIL_USER:", process.env.GMAIL_USER);
+    console.log("GMAIL_PASS:", process.env.GMAIL_PASS);
+
+    // Check if email configuration is set up
+    if (!process.env.GMAIL_USER || !process.env.GMAIL_PASS) {
+        return res.status(500).json({ error: 'Email configuration is not set up correctly' });
+    }
 
     // Create a transporter object using SMTP
     const transporter = nodemailer.createTransport({
