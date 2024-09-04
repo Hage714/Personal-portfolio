@@ -122,7 +122,7 @@ const ProjectsSection = () => {
                                         imgUrl={project.imgUrl}
                                         title={project.title}
                                         description={project.description}
-                                        //tags={project} // this is an array of strings that will be rendered as tags in the ProjectCard component
+                                        tags={project.tag} // this is an array of strings that will be rendered as tags in the ProjectCard component
                                         gitUrl={project.gitUrl}
                                         previewUrl={project.previewUrl}
                                     />

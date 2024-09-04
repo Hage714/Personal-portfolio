@@ -2,7 +2,7 @@ import React from 'react'
 import { CodeBracketIcon, EyeIcon } from '@heroicons/react/20/solid'
 import Link from 'next/link'
 
-const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
+const ProjectCard = ({ imgUrl, title, description, tags, gitUrl, previewUrl }) => {
     return (
         <div>
             <div style={{ background: `url(${imgUrl})` }} className="bg-cover bg-center h-52 md:h-72 rounded-t-xl relative group">
