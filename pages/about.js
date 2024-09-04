@@ -23,7 +23,7 @@ const skillVariants = {
 };
 
 const About = () => {
-    const [tab, setTab] = useState("skills");
+    const [tab, setTab] = useState("skills");  //state for tab
     const [isPending, startTransition] = useTransition();
 
     const handleTabChange = (id) => {  //updating state without blocking UI
